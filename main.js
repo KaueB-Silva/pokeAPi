@@ -19,7 +19,7 @@ const colors = {
 const mainTypes = Object.keys(colors)
 
 const fetchPokemons = async () => {
-    for(let i = 1; i <= 1; i++){
+    for(let i = 1; i <= 500; i++){
         await requisicao(i)
     }
 }
@@ -41,7 +41,7 @@ function createPokemonCard(poke) {
     const pokeTypes = poke.types.map(tipo => tipo.type.name)
     const type = mainTypes.find(type => pokeTypes.indexOf(type) > -1)
     const color = colors[type]
-    
+
 
     card.style.backgroundColor = color
 
